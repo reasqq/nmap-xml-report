@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///not-used/nmap.xsl" type="text/xsl"?>
+<nmaprun scanner="nmap" start="1700000000" startstr="Synthetic lab start" xmloutputversion="1.05">
+  <host>
+    <status state="up"/>
+    <address addr="192.0.2.10" addrtype="ipv4"/>
+    <address addr="2001:db8::10" addrtype="ipv6"/>
+    <hostnames><hostname name="alpha.example.test"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="22"><state state="open"/><service name="ssh" product="ExampleSSH" version="1.0-lab"/></port>
+      <port protocol="tcp" portid="80"><state state="closed"/></port>
+      <port protocol="tcp" portid="443"><state state="filtered"/><service name="https"/></port>
+      <port protocol="udp" portid="53"><state state="open|filtered"/><service name="domain"/></port>
+      <extraports state="closed" count="10"/>
+    </ports>
+  </host>
+  <host><status state="down"/><address addr="198.51.100.20" addrtype="ipv4"/></host>
+  <host><address addr="203.0.113.30" addrtype="ipv4"/><ports><port portid="123" protocol="udp"/></ports></host>
+  <runstats><finished time="1700000005" timestr="Synthetic lab end" elapsed="5.0" exit="success"/><hosts up="2" down="1" total="3"/></runstats>
+</nmaprun>
